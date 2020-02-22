@@ -9,7 +9,7 @@ Test Teardown    Close Application
 
 *** Test Cases ***
 User selects parking lot: "Long-Term Garage Parking" and gets the estimated Parking Cost
-    [Documentation]  Calculates the Long-Term Garage Parking parking cost for 1, 10, 24, 48 hours and a week.
+    [Documentation]  Calculates the Long-Term Garage Parking parking cost for 1, 10, 24, 48 hours and one week.
     Landing Page loads and its elements are visible
     User Choose “Long-Term Garage Parking” in Combobox
     User calculates "Long-Term Garage Parking” costs for 1 hour.
