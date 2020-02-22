@@ -1,7 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
 Documentation    Navigation to main page
-#Variables   ../../Variables/EnvironmentVariables.py
 
 
 *** Variables ***
@@ -15,9 +14,9 @@ ${EntryPMRadioButton}       xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/i
 ${LeavingDateInput}         xpath://*[@id="LeavingDate"]
 ${LeavingTimeInput}         xpath://*[@id="LeavingTime"]
 ${LeavingAMRadioButton}     xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[3]
-${LeavingAMRadioButton}     xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[4]
+${LeavingPMRadioButton}     xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[4]
 
-${EstimatedParkingCost}     xpath://tbody/tr[4]/td[@class='SubHead']
+
 ${CalculateBtn}             xpath://body/form/input[2]
 
 
