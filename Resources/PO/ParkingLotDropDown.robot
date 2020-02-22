@@ -15,6 +15,7 @@ ${LTSParking}               Long-Term Surface Parking
 User selects an option from combobox
     [Arguments]   ${ComboLocator}  ${ParkingName}
     Click Element   ${ComboLocator}
+    Sleep   2s
     Click Element   //*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]
     Sleep  3s
 

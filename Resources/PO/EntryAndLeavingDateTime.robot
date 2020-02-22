@@ -24,12 +24,12 @@ Input Date into Datefield
 Add Current Date from system into Datefield
     [Arguments]         ${DateLocator}
     ${CurrentDate}=     Get Current Date   UTC   exclude_millis=yes
-    ${date}           Convert Date          ${CurrentDate}      result_format=%m/%d/%Y
-    Input Date into Datefield            ${DateLocator}  ${date}
+    ${date}             Convert Date       ${CurrentDate}      result_format=%m/%d/%Y
+    Input Date into Datefield              ${DateLocator}  ${date}
 
-Add One Day to current date from system into Datefield
-    [Arguments]  ${dateLocator}
-    Get Date from system and add X day  1 days  ${dateLocator}
+Add X Day to current date from system into Datefield
+    [Arguments]  ${days}  ${dateLocator}
+    Get Date from system and add X day  ${days}  ${dateLocator}
 
 Get Date from system and add X day
     [Arguments]  ${value}  ${dateLocator}
@@ -62,13 +62,13 @@ User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields
     Add Current Date from system into Datefield              ${EntryDateInput}
     User adds a valid time  ${EntryTimeInput}   ${DefaultTime24}
     Click Element  ${EntryPMRadioButton}
-    Add One Day to current date from system into Datefield   ${LeavingDateInput}
+    Add X Day to current date from system into Datefield  1 days  ${LeavingDateInput}
     User adds a valid time  ${LeavingTimeInput}   ${DefaultTime24}
     Click Element  ${LeavingPMRadioButton}
 
-User Adds a 1 day 5 hours into Date Time Fields
-    [Arguments]   ${Entry_Time}  ${DefaultTime}
+User Adds X days and X hours into Date Time Fields
+    [Arguments]     ${X_Days}   ${Entry_Time}  ${DefaultTime}
     Add Current Date from system into Datefield  ${EntryDateInput}
     User adds a valid time  ${EntryTimeInput}   ${Entry_Time}
-    Add One Day to current date from system into Datefield   ${LeavingDateInput}
+    Add X Day to current date from system into Datefield   ${X_Days}  ${LeavingDateInput}
     User adds a valid time  ${LeavingTimeInput}   ${DefaultTime}
