@@ -33,5 +33,5 @@ The user calculates "Valet Parking" costs for 24 hours.
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateFor24hours}
 
 The user calculates "Valet Parking" costs for "1 day and 5 hours".
-    User Adds a 1 day 5 hours into Date Time Fields                 ${DefaultEntryTime}  ${LeavingTime5hours}
+    User Adds a 1 day X hours into Date Time Fields                 ${DefaultEntryTime}  ${LeavingTime5hours}
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateFor29hours}
