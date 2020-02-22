@@ -1,7 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary
-Library  DateTime
-Documentation    Keywords available to test PO Parking Lot
+Documentation    Keywords available to test scenarios Parking Lot
 
 Resource  ./PO/EntryAndLeavingDateTime.robot
 Resource  ./Common.robot
@@ -10,7 +8,7 @@ Resource  ./Common.robot
 #defaultValues
 ${DefaultEntryTime}         01:00
 ${LeavingTime5hours}        06:00
-${LeavingTime10}       11:00
+${LeavingTime10}            11:00
 
 #Results Expected
 ${ExpectedRateFor5hours}        $ 12.00
@@ -20,14 +18,10 @@ ${ExpectedRateFor29hours}       $ 30.00
 
 *** Keywords ***
 The user calculates "Valet Parking" costs for 5 hours.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime5hours}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateFor5hours}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"   ${DefaultEntryTime}  ${LeavingTime5hours}  ${ExpectedRateFor5hours}
 
 The user calculates "Valet Parking" costs for 10 hours.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime10}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateFor10hours}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"   ${DefaultEntryTime}  ${LeavingTime10}  ${ExpectedRateFor10hours}
 
 The user calculates "Valet Parking" costs for 24 hours.
     User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields
