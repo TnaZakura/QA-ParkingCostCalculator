@@ -1,7 +1,7 @@
 *** Settings ***
 Resource  ../Resources/Common.robot
 Resource  ../Resources/ParkingCostCalculatorLoads.robot
-Resource  ../Resources/EconomyParking.robot
+Resource  ../Resources/ShortTermParking.robot
 Library  SeleniumLibrary
 
 Test Setup       Open Application
