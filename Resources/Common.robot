@@ -1,8 +1,7 @@
 *** Settings ***
+Documentation    Keywords used for Test Setup  and Test Teardown and some common functions
+Resource  ./PO/EntryAndLeavingDateTime.robot
 Library     SeleniumLibrary
-Library     DateTime
-Documentation    Keywords used for Test Setup  and Test Teardown
-
 *** Variables ***
 ${LOGIN URL}      http://www.shino.de/parkcalc/
 ${BROWSER}        chrome
@@ -29,4 +28,8 @@ User clicks "Calculate" Button and gets an estimation cost
     Should be equal  ${Var}  ${ExpectedRate}
     Sleep  3s
 
-
+User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"
+    [Arguments]     ${EntryTime}  ${LeavingTime}  ${ExpectedRate}
+    User adds a "Valid Entry Date" and Valid "Entry Time"        ${EntryTime}
+    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime}
+    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRate}
