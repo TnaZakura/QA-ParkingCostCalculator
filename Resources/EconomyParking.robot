@@ -1,8 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library  DateTime
 Documentation    Keywords available to test PO Parking Lot
-Resource  ./PO/ParkingLotDropDown.robot
+
 Resource  ./PO/EntryAndLeavingDateTime.robot
 Resource  ./Common.robot
 
