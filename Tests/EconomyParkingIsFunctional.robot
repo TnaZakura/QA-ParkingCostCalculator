@@ -2,7 +2,7 @@
 Resource  ../Resources/Common.robot
 Resource  ../Resources/ParkingCostCalculatorLoads.robot
 Resource  ../Resources/EconomyParking.robot
-Library  SeleniumLibrary
+Resource  ../Resources/PO/ParkingLotDropDown.robot
 
 Test Setup       Open Application
 Test Teardown    Close Application

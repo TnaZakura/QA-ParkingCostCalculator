@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200222 16:03:03.192" rpa="false">
+<suite id="s1" name="EconomyParkingIsFunctional" source="C:\Development\Robot-Scripts\QA-ParkingCostCalculator\Tests\EconomyParkingIsFunctional.robot">
+<test id="s1-t1" name="User selects parking lot: &quot;Economy Parking&quot; and gets the estimated Parking Cost">
+<kw name="Open Application" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:03.680" level="INFO">Opening browser 'chrome' to base url 'http://www.shino.de/parkcalc/'.</msg>
+<status status="PASS" starttime="20200222 16:03:03.680" endtime="20200222 16:03:06.538"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200222 16:03:06.538" endtime="20200222 16:03:06.807"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:09.809" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:06.808" endtime="20200222 16:03:09.809"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:03.679" endtime="20200222 16:03:09.809"></status>
+</kw>
+<kw name="Landing Page loads and its elements are visible" library="ParkingCostCalculatorLoads">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${PageTitle}</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:09.811" endtime="20200222 16:03:09.852"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${ParkingLot}</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:09.853" endtime="20200222 16:03:09.881"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:11.881" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:09.881" endtime="20200222 16:03:11.881"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:11.934" level="INFO">Element 'xpath://*[@id="StartingDate"]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:11.881" endtime="20200222 16:03:11.935"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${EntryTimeInput}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:11.984" level="INFO">Element 'xpath://*[@id="StartingTime"]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:11.935" endtime="20200222 16:03:11.984"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${EntryAMRadioButton}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:12.031" level="INFO">Element 'xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/input[3]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:11.985" endtime="20200222 16:03:12.031"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${EntryPMRadioButton}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:12.068" level="INFO">Element 'xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/input[4]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:12.032" endtime="20200222 16:03:12.068"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:12.108" level="INFO">Element 'xpath://*[@id="LeavingDate"]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:12.069" endtime="20200222 16:03:12.108"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:12.144" level="INFO">Element 'xpath://*[@id="LeavingTime"]' is displayed.</msg>
+<status status="PASS" starttime="20200222 16:03:12.108" endtime="20200222 16:03:12.144"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:14.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:12.145" endtime="20200222 16:03:14.145"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:09.810" endtime="20200222 16:03:14.145"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:14.147" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:03:14.146" endtime="20200222 16:03:14.243"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:16.244" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:14.244" endtime="20200222 16:03:16.244"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:16.244" endtime="20200222 16:03:16.280"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:17.280" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:03:16.280" endtime="20200222 16:03:17.280"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:03:17.281" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:03:17.280" endtime="20200222 16:03:17.337"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:22.339" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:17.339" endtime="20200222 16:03:22.339"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:14.146" endtime="20200222 16:03:22.339"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:14.145" endtime="20200222 16:03:22.340"></status>
+</kw>
+<kw name="User calculates &quot;Economy Parking” costs for 1 hour." library="EconomyParking">
+<kw name="User Enters Valid &quot;Entry Date/Time&quot; and &quot;Leaving Date/Time&quot; values and &quot;Clicks Calculate button&quot;" library="Common">
+<arguments>
+<arg>${DefaultEntryTime}</arg>
+<arg>${LTime1hour}</arg>
+<arg>${ExpectedRateEP1hour}</arg>
+</arguments>
+<kw name="User adds a &quot;Valid Entry Date&quot; and Valid &quot;Entry Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:03:22.344" level="INFO">${CurrentDate} = 2020-02-22 22:03:22</msg>
+<status status="PASS" starttime="20200222 16:03:22.343" endtime="20200222 16:03:22.344"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:03:22.349" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:03:22.344" endtime="20200222 16:03:22.349"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:22.350" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:22.350" endtime="20200222 16:03:22.448"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:22.448" endtime="20200222 16:03:22.496"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:24.497" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:22.496" endtime="20200222 16:03:24.497"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:24.498" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:24.497" endtime="20200222 16:03:24.647"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:26.648" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:24.647" endtime="20200222 16:03:26.648"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:22.349" endtime="20200222 16:03:26.648"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:22.343" endtime="20200222 16:03:26.648"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:26.649" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:26.649" endtime="20200222 16:03:26.719"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:26.719" endtime="20200222 16:03:26.776"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:28.777" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:26.776" endtime="20200222 16:03:28.777"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:28.778" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:28.777" endtime="20200222 16:03:28.896"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:31.897" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:28.896" endtime="20200222 16:03:31.897"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:26.648" endtime="20200222 16:03:31.897"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:22.342" endtime="20200222 16:03:31.897"></status>
+</kw>
+<kw name="User adds a &quot;Valid Leaving Date&quot; and Valid &quot;Leaving Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:03:31.899" level="INFO">${CurrentDate} = 2020-02-22 22:03:32</msg>
+<status status="PASS" starttime="20200222 16:03:31.898" endtime="20200222 16:03:31.899"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:03:31.899" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:03:31.899" endtime="20200222 16:03:31.899"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:31.900" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:31.900" endtime="20200222 16:03:31.975"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:31.975" endtime="20200222 16:03:32.051"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:34.051" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:32.051" endtime="20200222 16:03:34.051"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:34.052" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:34.051" endtime="20200222 16:03:34.187"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:36.188" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:34.187" endtime="20200222 16:03:36.188"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:31.900" endtime="20200222 16:03:36.188"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:31.898" endtime="20200222 16:03:36.188"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultLeavingTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:36.189" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:36.189" endtime="20200222 16:03:36.257"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:36.257" endtime="20200222 16:03:36.307"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:38.307" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:36.307" endtime="20200222 16:03:38.307"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:38.307" level="INFO">Typing text '02:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:03:38.307" endtime="20200222 16:03:38.417"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:41.418" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:38.417" endtime="20200222 16:03:41.418"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:36.188" endtime="20200222 16:03:41.419"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:31.897" endtime="20200222 16:03:41.419"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:41.421" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:03:41.421" endtime="20200222 16:03:47.049"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:49.051" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:47.050" endtime="20200222 16:03:49.051"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:03:49.097" level="INFO">${Var} = $ 2.00</msg>
+<status status="PASS" starttime="20200222 16:03:49.051" endtime="20200222 16:03:49.098"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:49.098" level="INFO">$ 2.00</msg>
+<status status="PASS" starttime="20200222 16:03:49.098" endtime="20200222 16:03:49.099"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:49.099" endtime="20200222 16:03:49.100"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:52.100" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:49.100" endtime="20200222 16:03:52.100"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:41.419" endtime="20200222 16:03:52.100"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:22.342" endtime="20200222 16:03:52.101"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:22.341" endtime="20200222 16:03:52.101"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:03:52.104" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:03:52.103" endtime="20200222 16:03:52.213"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:54.214" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:52.214" endtime="20200222 16:03:54.214"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:03:54.214" endtime="20200222 16:03:54.247"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:03:55.247" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:03:54.247" endtime="20200222 16:03:55.247"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:03:55.247" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:03:55.247" endtime="20200222 16:03:55.298"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:00.301" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:03:55.299" endtime="20200222 16:04:00.301"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:52.102" endtime="20200222 16:04:00.301"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:03:52.102" endtime="20200222 16:04:00.301"></status>
+</kw>
+<kw name="The user calculates &quot;Economy Parking” costs for 4 hours." library="EconomyParking">
+<kw name="User Enters Valid &quot;Entry Date/Time&quot; and &quot;Leaving Date/Time&quot; values and &quot;Clicks Calculate button&quot;" library="Common">
+<arguments>
+<arg>${DefaultEntryTime}</arg>
+<arg>${LTime4hours}</arg>
+<arg>${ExpectedRateEP4hours}</arg>
+</arguments>
+<kw name="User adds a &quot;Valid Entry Date&quot; and Valid &quot;Entry Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:04:00.304" level="INFO">${CurrentDate} = 2020-02-22 22:04:00</msg>
+<status status="PASS" starttime="20200222 16:04:00.304" endtime="20200222 16:04:00.304"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:04:00.305" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:04:00.304" endtime="20200222 16:04:00.305"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:00.306" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:00.306" endtime="20200222 16:04:00.395"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:00.395" endtime="20200222 16:04:00.442"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:02.443" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:00.442" endtime="20200222 16:04:02.443"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:02.444" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:02.444" endtime="20200222 16:04:02.588"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:04.588" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:02.588" endtime="20200222 16:04:04.588"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:00.305" endtime="20200222 16:04:04.588"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:00.303" endtime="20200222 16:04:04.588"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:04.589" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:04.589" endtime="20200222 16:04:04.661"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:04.662" endtime="20200222 16:04:04.708"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:06.709" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:04.709" endtime="20200222 16:04:06.709"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:06.710" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:06.710" endtime="20200222 16:04:06.814"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:09.814" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:06.814" endtime="20200222 16:04:09.814"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:04.588" endtime="20200222 16:04:09.814"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:00.303" endtime="20200222 16:04:09.814"></status>
+</kw>
+<kw name="User adds a &quot;Valid Leaving Date&quot; and Valid &quot;Leaving Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:04:09.818" level="INFO">${CurrentDate} = 2020-02-22 22:04:10</msg>
+<status status="PASS" starttime="20200222 16:04:09.818" endtime="20200222 16:04:09.818"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:04:09.821" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:04:09.820" endtime="20200222 16:04:09.821"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:09.822" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:09.821" endtime="20200222 16:04:09.904"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:09.905" endtime="20200222 16:04:09.960"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:11.961" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:09.961" endtime="20200222 16:04:11.961"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:11.963" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:11.962" endtime="20200222 16:04:12.138"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:14.139" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:12.138" endtime="20200222 16:04:14.139"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:09.821" endtime="20200222 16:04:14.139"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:09.817" endtime="20200222 16:04:14.139"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultLeavingTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:14.140" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:14.140" endtime="20200222 16:04:14.214"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:14.214" endtime="20200222 16:04:14.269"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:16.270" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:14.269" endtime="20200222 16:04:16.270"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:16.271" level="INFO">Typing text '05:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:16.270" endtime="20200222 16:04:16.376"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:19.376" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:16.376" endtime="20200222 16:04:19.376"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:14.139" endtime="20200222 16:04:19.376"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:09.817" endtime="20200222 16:04:19.376"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:19.377" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:04:19.377" endtime="20200222 16:04:20.154"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:22.154" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:20.154" endtime="20200222 16:04:22.154"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:04:22.198" level="INFO">${Var} = $ 8.00</msg>
+<status status="PASS" starttime="20200222 16:04:22.154" endtime="20200222 16:04:22.198"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:22.198" level="INFO">$ 8.00</msg>
+<status status="PASS" starttime="20200222 16:04:22.198" endtime="20200222 16:04:22.198"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:22.199" endtime="20200222 16:04:22.199"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:25.199" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:22.199" endtime="20200222 16:04:25.199"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:19.376" endtime="20200222 16:04:25.199"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:00.302" endtime="20200222 16:04:25.199"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:00.302" endtime="20200222 16:04:25.199"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:25.201" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:04:25.201" endtime="20200222 16:04:25.301"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:27.302" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:25.302" endtime="20200222 16:04:27.302"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:27.302" endtime="20200222 16:04:27.341"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:28.342" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:04:27.341" endtime="20200222 16:04:28.342"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:04:28.342" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:04:28.342" endtime="20200222 16:04:28.402"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:33.404" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:28.402" endtime="20200222 16:04:33.404"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:25.200" endtime="20200222 16:04:33.404"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:25.200" endtime="20200222 16:04:33.404"></status>
+</kw>
+<kw name="The user calculates &quot;Economy Parking” costs for 5 hours." library="EconomyParking">
+<kw name="User Enters Valid &quot;Entry Date/Time&quot; and &quot;Leaving Date/Time&quot; values and &quot;Clicks Calculate button&quot;" library="Common">
+<arguments>
+<arg>${DefaultEntryTime}</arg>
+<arg>${LTime5hours}</arg>
+<arg>${ExpectedRateEP5hours}</arg>
+</arguments>
+<kw name="User adds a &quot;Valid Entry Date&quot; and Valid &quot;Entry Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:04:33.408" level="INFO">${CurrentDate} = 2020-02-22 22:04:33</msg>
+<status status="PASS" starttime="20200222 16:04:33.407" endtime="20200222 16:04:33.408"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:04:33.408" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:04:33.408" endtime="20200222 16:04:33.408"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:33.409" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:33.409" endtime="20200222 16:04:33.499"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:33.499" endtime="20200222 16:04:33.552"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:35.553" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:33.552" endtime="20200222 16:04:35.553"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:35.553" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:35.553" endtime="20200222 16:04:35.687"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:37.688" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:35.687" endtime="20200222 16:04:37.688"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:33.408" endtime="20200222 16:04:37.688"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:33.406" endtime="20200222 16:04:37.688"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:37.689" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:37.689" endtime="20200222 16:04:37.762"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:37.763" endtime="20200222 16:04:37.825"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:39.826" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:37.825" endtime="20200222 16:04:39.826"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:39.826" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:39.826" endtime="20200222 16:04:39.945"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:42.945" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:39.945" endtime="20200222 16:04:42.945"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:37.688" endtime="20200222 16:04:42.945"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:33.406" endtime="20200222 16:04:42.945"></status>
+</kw>
+<kw name="User adds a &quot;Valid Leaving Date&quot; and Valid &quot;Leaving Time&quot;" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:04:42.947" level="INFO">${CurrentDate} = 2020-02-22 22:04:43</msg>
+<status status="PASS" starttime="20200222 16:04:42.946" endtime="20200222 16:04:42.947"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:04:42.947" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:04:42.947" endtime="20200222 16:04:42.947"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:42.948" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:42.948" endtime="20200222 16:04:43.032"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:43.032" endtime="20200222 16:04:43.079"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:45.080" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:43.079" endtime="20200222 16:04:45.080"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:45.080" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:45.080" endtime="20200222 16:04:45.202"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:47.202" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:45.202" endtime="20200222 16:04:47.202"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:42.948" endtime="20200222 16:04:47.202"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:42.946" endtime="20200222 16:04:47.203"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultLeavingTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:47.204" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:47.204" endtime="20200222 16:04:47.286"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:47.286" endtime="20200222 16:04:47.338"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:49.339" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:47.338" endtime="20200222 16:04:49.339"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:49.339" level="INFO">Typing text '06:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:04:49.339" endtime="20200222 16:04:49.443"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:52.444" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:49.443" endtime="20200222 16:04:52.444"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:47.203" endtime="20200222 16:04:52.444"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:42.945" endtime="20200222 16:04:52.444"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:52.445" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:04:52.445" endtime="20200222 16:04:52.966"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:54.967" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:52.966" endtime="20200222 16:04:54.967"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:04:55.006" level="INFO">${Var} = $ 9.00</msg>
+<status status="PASS" starttime="20200222 16:04:54.967" endtime="20200222 16:04:55.006"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:55.007" level="INFO">$ 9.00</msg>
+<status status="PASS" starttime="20200222 16:04:55.006" endtime="20200222 16:04:55.007"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:04:55.007" endtime="20200222 16:04:55.007"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:04:58.008" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:55.007" endtime="20200222 16:04:58.008"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:52.444" endtime="20200222 16:04:58.008"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:33.405" endtime="20200222 16:04:58.008"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:33.405" endtime="20200222 16:04:58.008"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:04:58.010" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:04:58.010" endtime="20200222 16:04:58.091"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:00.092" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:04:58.091" endtime="20200222 16:05:00.092"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:00.092" endtime="20200222 16:05:00.127"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:01.128" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:05:00.127" endtime="20200222 16:05:01.128"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:05:01.128" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:05:01.128" endtime="20200222 16:05:01.174"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:06.175" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:01.174" endtime="20200222 16:05:06.175"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:58.009" endtime="20200222 16:05:06.175"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:04:58.009" endtime="20200222 16:05:06.175"></status>
+</kw>
+<kw name="The user calculates &quot;Economy Parking” costs for 24 hours." library="EconomyParking">
+<kw name="User Adds a 24 hours windonw in &quot;Entry&quot; and &quot;Leaving&quot; Date Time Fields" library="EntryAndLeavingDateTime">
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:05:06.177" level="INFO">${CurrentDate} = 2020-02-22 22:05:06</msg>
+<status status="PASS" starttime="20200222 16:05:06.177" endtime="20200222 16:05:06.177"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:05:06.178" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:05:06.177" endtime="20200222 16:05:06.178"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:06.179" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:06.179" endtime="20200222 16:05:06.261"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:06.261" endtime="20200222 16:05:06.304"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:08.305" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:06.304" endtime="20200222 16:05:08.305"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:08.305" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:08.305" endtime="20200222 16:05:08.437"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:10.437" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:08.437" endtime="20200222 16:05:10.437"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:06.178" endtime="20200222 16:05:10.437"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:06.176" endtime="20200222 16:05:10.437"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${DefaultTime24}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:10.438" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:10.438" endtime="20200222 16:05:10.501"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:10.501" endtime="20200222 16:05:10.546"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:12.547" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:10.547" endtime="20200222 16:05:12.547"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:12.548" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:12.547" endtime="20200222 16:05:12.643"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:15.643" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:12.643" endtime="20200222 16:05:15.643"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:10.437" endtime="20200222 16:05:15.644"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${EntryPMRadioButton}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:15.645" level="INFO">Clicking element 'xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/input[4]'.</msg>
+<status status="PASS" starttime="20200222 16:05:15.644" endtime="20200222 16:05:15.728"></status>
+</kw>
+<kw name="Add X Day to current date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>1 days</arg>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Date from system and add X day" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${days}</arg>
+<arg>${dateLocator}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurDate}</var>
+</assign>
+<msg timestamp="20200222 16:05:15.732" level="INFO">${CurDate} = 2020-02-22 22:05:16</msg>
+<status status="PASS" starttime="20200222 16:05:15.731" endtime="20200222 16:05:15.732"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurDate}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${addOne}</var>
+</assign>
+<msg timestamp="20200222 16:05:15.733" level="INFO">${addOne} = 2020-02-23 22:05:16.000</msg>
+<status status="PASS" starttime="20200222 16:05:15.732" endtime="20200222 16:05:15.733"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${addOne}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${nextDay}</var>
+</assign>
+<msg timestamp="20200222 16:05:15.734" level="INFO">${nextDay} = 02/23/2020</msg>
+<status status="PASS" starttime="20200222 16:05:15.733" endtime="20200222 16:05:15.734"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${nextDay}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200222 16:05:15.735" level="INFO">02/23/2020</msg>
+<status status="PASS" starttime="20200222 16:05:15.735" endtime="20200222 16:05:15.735"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${dateLocator}</arg>
+<arg>${nextDay}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:15.736" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:15.736" endtime="20200222 16:05:15.865"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:15.866" endtime="20200222 16:05:16.033"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:18.034" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:16.033" endtime="20200222 16:05:18.034"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:18.035" level="INFO">Typing text '02/23/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:18.034" endtime="20200222 16:05:18.151"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:20.151" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:18.151" endtime="20200222 16:05:20.151"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:15.735" endtime="20200222 16:05:20.151"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:15.729" endtime="20200222 16:05:20.151"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:15.728" endtime="20200222 16:05:20.151"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultTime24}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:20.152" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:20.152" endtime="20200222 16:05:20.227"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:20.227" endtime="20200222 16:05:20.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:22.274" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:20.274" endtime="20200222 16:05:22.274"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:22.275" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:22.274" endtime="20200222 16:05:22.378"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:25.380" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:22.378" endtime="20200222 16:05:25.380"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:20.152" endtime="20200222 16:05:25.380"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LeavingPMRadioButton}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:25.381" level="INFO">Clicking element 'xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[4]'.</msg>
+<status status="PASS" starttime="20200222 16:05:25.381" endtime="20200222 16:05:25.446"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:06.176" endtime="20200222 16:05:25.446"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRateEP24hours}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:25.447" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:05:25.447" endtime="20200222 16:05:28.403"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:30.403" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:28.403" endtime="20200222 16:05:30.403"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:05:30.438" level="INFO">${Var} = $ 9.00</msg>
+<status status="PASS" starttime="20200222 16:05:30.403" endtime="20200222 16:05:30.438"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:30.439" level="INFO">$ 9.00</msg>
+<status status="PASS" starttime="20200222 16:05:30.439" endtime="20200222 16:05:30.439"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:30.439" endtime="20200222 16:05:30.439"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:33.440" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:30.440" endtime="20200222 16:05:33.440"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:25.446" endtime="20200222 16:05:33.440"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:06.176" endtime="20200222 16:05:33.440"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:33.442" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:05:33.441" endtime="20200222 16:05:33.527"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:35.528" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:33.528" endtime="20200222 16:05:35.528"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:35.528" endtime="20200222 16:05:35.563"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:36.564" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:05:35.563" endtime="20200222 16:05:36.564"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:05:36.565" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:05:36.564" endtime="20200222 16:05:36.606"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:41.607" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:36.606" endtime="20200222 16:05:41.607"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:33.441" endtime="20200222 16:05:41.607"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:33.441" endtime="20200222 16:05:41.607"></status>
+</kw>
+<kw name="The user calculates &quot;Economy Parking” costs for 48 hours." library="EconomyParking">
+<kw name="User Adds X days and X hours into Date Time Fields" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>2 days</arg>
+<arg>${DefaultEntryTime}</arg>
+<arg>${DefaultEntryTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:05:41.609" level="INFO">${CurrentDate} = 2020-02-22 22:05:42</msg>
+<status status="PASS" starttime="20200222 16:05:41.609" endtime="20200222 16:05:41.609"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:05:41.610" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:05:41.610" endtime="20200222 16:05:41.610"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:41.611" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:41.611" endtime="20200222 16:05:41.689"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:41.689" endtime="20200222 16:05:41.732"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:43.734" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:41.733" endtime="20200222 16:05:43.734"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:43.735" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:43.734" endtime="20200222 16:05:43.856"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:45.857" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:43.857" endtime="20200222 16:05:45.857"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:41.610" endtime="20200222 16:05:45.857"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:41.608" endtime="20200222 16:05:45.857"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${Entry_Time}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:45.858" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:45.858" endtime="20200222 16:05:45.924"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:45.924" endtime="20200222 16:05:45.973"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:47.974" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:45.974" endtime="20200222 16:05:47.974"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:47.975" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:47.974" endtime="20200222 16:05:48.094"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:51.095" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:48.094" endtime="20200222 16:05:51.095"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:45.857" endtime="20200222 16:05:51.095"></status>
+</kw>
+<kw name="Add X Day to current date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${X_Days}</arg>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Date from system and add X day" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${days}</arg>
+<arg>${dateLocator}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurDate}</var>
+</assign>
+<msg timestamp="20200222 16:05:51.096" level="INFO">${CurDate} = 2020-02-22 22:05:51</msg>
+<status status="PASS" starttime="20200222 16:05:51.096" endtime="20200222 16:05:51.096"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurDate}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${addOne}</var>
+</assign>
+<msg timestamp="20200222 16:05:51.097" level="INFO">${addOne} = 2020-02-24 22:05:51.000</msg>
+<status status="PASS" starttime="20200222 16:05:51.097" endtime="20200222 16:05:51.097"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${addOne}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${nextDay}</var>
+</assign>
+<msg timestamp="20200222 16:05:51.098" level="INFO">${nextDay} = 02/24/2020</msg>
+<status status="PASS" starttime="20200222 16:05:51.097" endtime="20200222 16:05:51.098"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${nextDay}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200222 16:05:51.098" level="INFO">02/24/2020</msg>
+<status status="PASS" starttime="20200222 16:05:51.098" endtime="20200222 16:05:51.098"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${dateLocator}</arg>
+<arg>${nextDay}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:51.099" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:51.099" endtime="20200222 16:05:51.167"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:51.167" endtime="20200222 16:05:51.217"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:53.219" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:51.218" endtime="20200222 16:05:53.219"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:53.219" level="INFO">Typing text '02/24/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:53.219" endtime="20200222 16:05:53.337"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:55.338" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:53.338" endtime="20200222 16:05:55.338"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:51.099" endtime="20200222 16:05:55.338"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:51.096" endtime="20200222 16:05:55.339"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:51.095" endtime="20200222 16:05:55.339"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:55.343" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:55.342" endtime="20200222 16:05:55.466"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:05:55.466" endtime="20200222 16:05:55.543"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:05:57.544" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:55.544" endtime="20200222 16:05:57.544"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:05:57.544" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:05:57.544" endtime="20200222 16:05:57.644"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:00.646" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:05:57.644" endtime="20200222 16:06:00.646"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:55.340" endtime="20200222 16:06:00.646"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:41.608" endtime="20200222 16:06:00.646"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRateEP48hours}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:00.647" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:06:00.647" endtime="20200222 16:06:02.885"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:04.890" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:02.889" endtime="20200222 16:06:04.890"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:06:04.928" level="INFO">${Var} = $ 18.00</msg>
+<status status="PASS" starttime="20200222 16:06:04.890" endtime="20200222 16:06:04.928"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:04.929" level="INFO">$ 18.00</msg>
+<status status="PASS" starttime="20200222 16:06:04.929" endtime="20200222 16:06:04.929"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:04.929" endtime="20200222 16:06:04.930"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:07.930" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:04.930" endtime="20200222 16:06:07.930"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:00.646" endtime="20200222 16:06:07.930"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:05:41.608" endtime="20200222 16:06:07.930"></status>
+</kw>
+<kw name="User Choose “Economy Parking” in combobox" library="ParkingLotDropDown">
+<kw name="User selects an option from combobox" library="ParkingLotDropDown">
+<arguments>
+<arg>${ParkingLotLocatior}</arg>
+<arg>${EconomyParking}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ComboLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:07.931" level="INFO">Clicking element 'xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']'.</msg>
+<status status="PASS" starttime="20200222 16:06:07.931" endtime="20200222 16:06:08.031"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:10.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:08.031" endtime="20200222 16:06:10.031"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:10.031" endtime="20200222 16:06:10.071"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:11.072" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200222 16:06:10.072" endtime="20200222 16:06:11.072"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]</arg>
+</arguments>
+<msg timestamp="20200222 16:06:11.073" level="INFO">Clicking element '//*[@id="ParkingLot"]/option[contains(text(),'Economy Parking')]'.</msg>
+<status status="PASS" starttime="20200222 16:06:11.072" endtime="20200222 16:06:11.137"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:16.139" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:11.138" endtime="20200222 16:06:16.139"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:07.931" endtime="20200222 16:06:16.139"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:07.930" endtime="20200222 16:06:16.139"></status>
+</kw>
+<kw name="The user calculates &quot;Economy Parking” costs for 1 week." library="EconomyParking">
+<kw name="User Adds X days and X hours into Date Time Fields" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>7 days</arg>
+<arg>${DefaultEntryTime}</arg>
+<arg>${DefaultEntryTime}</arg>
+</arguments>
+<kw name="Add Current Date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryDateInput}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200222 16:06:16.142" level="INFO">${CurrentDate} = 2020-02-22 22:06:16</msg>
+<status status="PASS" starttime="20200222 16:06:16.141" endtime="20200222 16:06:16.142"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200222 16:06:16.142" level="INFO">${date} = 02/22/2020</msg>
+<status status="PASS" starttime="20200222 16:06:16.142" endtime="20200222 16:06:16.142"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${DateLocator}</arg>
+<arg>${date}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:16.143" level="INFO">Clicking element 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:16.143" endtime="20200222 16:06:16.231"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:16.231" endtime="20200222 16:06:16.274"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:18.276" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:16.274" endtime="20200222 16:06:18.276"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:18.276" level="INFO">Typing text '02/22/2020' into text field 'xpath://*[@id="StartingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:18.276" endtime="20200222 16:06:18.397"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:20.397" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:18.397" endtime="20200222 16:06:20.397"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:16.142" endtime="20200222 16:06:20.397"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:16.141" endtime="20200222 16:06:20.397"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${EntryTimeInput}</arg>
+<arg>${Entry_Time}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:20.399" level="INFO">Clicking element 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:20.399" endtime="20200222 16:06:20.473"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:20.473" endtime="20200222 16:06:20.522"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:22.523" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:20.522" endtime="20200222 16:06:22.523"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:22.523" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="StartingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:22.523" endtime="20200222 16:06:22.621"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:25.622" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:22.621" endtime="20200222 16:06:25.622"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:20.398" endtime="20200222 16:06:25.622"></status>
+</kw>
+<kw name="Add X Day to current date from system into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${X_Days}</arg>
+<arg>${LeavingDateInput}</arg>
+</arguments>
+<kw name="Get Date from system and add X day" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${days}</arg>
+<arg>${dateLocator}</arg>
+</arguments>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${CurDate}</var>
+</assign>
+<msg timestamp="20200222 16:06:25.623" level="INFO">${CurDate} = 2020-02-22 22:06:26</msg>
+<status status="PASS" starttime="20200222 16:06:25.623" endtime="20200222 16:06:25.623"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurDate}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${addOne}</var>
+</assign>
+<msg timestamp="20200222 16:06:25.624" level="INFO">${addOne} = 2020-02-29 22:06:26.000</msg>
+<status status="PASS" starttime="20200222 16:06:25.624" endtime="20200222 16:06:25.624"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${addOne}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${nextDay}</var>
+</assign>
+<msg timestamp="20200222 16:06:25.625" level="INFO">${nextDay} = 02/29/2020</msg>
+<status status="PASS" starttime="20200222 16:06:25.624" endtime="20200222 16:06:25.625"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${nextDay}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200222 16:06:25.625" level="INFO">02/29/2020</msg>
+<status status="PASS" starttime="20200222 16:06:25.625" endtime="20200222 16:06:25.625"></status>
+</kw>
+<kw name="Input Date into Datefield" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${dateLocator}</arg>
+<arg>${nextDay}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:25.627" level="INFO">Clicking element 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:25.626" endtime="20200222 16:06:25.711"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:25.711" endtime="20200222 16:06:25.756"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:27.757" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:25.757" endtime="20200222 16:06:27.757"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${DateInputLocator}</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:27.757" level="INFO">Typing text '02/29/2020' into text field 'xpath://*[@id="LeavingDate"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:27.757" endtime="20200222 16:06:27.869"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:29.870" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:27.870" endtime="20200222 16:06:29.870"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:25.626" endtime="20200222 16:06:29.870"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:25.623" endtime="20200222 16:06:29.870"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:25.622" endtime="20200222 16:06:29.870"></status>
+</kw>
+<kw name="User adds a valid time" library="EntryAndLeavingDateTime">
+<arguments>
+<arg>${LeavingTimeInput}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:29.871" level="INFO">Clicking element 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:29.871" endtime="20200222 16:06:29.940"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:29.940" endtime="20200222 16:06:29.991"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:31.991" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:29.991" endtime="20200222 16:06:31.991"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TimeInputLocator}</arg>
+<arg>${DefaultTime}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:31.992" level="INFO">Typing text '01:00' into text field 'xpath://*[@id="LeavingTime"]'.</msg>
+<status status="PASS" starttime="20200222 16:06:31.991" endtime="20200222 16:06:32.087"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:35.089" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:32.087" endtime="20200222 16:06:35.089"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:29.870" endtime="20200222 16:06:35.089"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:16.140" endtime="20200222 16:06:35.089"></status>
+</kw>
+<kw name="User clicks &quot;Calculate&quot; Button and gets an estimation cost" library="Common">
+<arguments>
+<arg>${ExpectedRateEP7days}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CalculateBtn}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:35.090" level="INFO">Clicking element 'xpath://body/form/input[2]'.</msg>
+<status status="PASS" starttime="20200222 16:06:35.090" endtime="20200222 16:06:37.495"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:39.496" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:37.495" endtime="20200222 16:06:39.496"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${EstimatedParkingCost}</arg>
+</arguments>
+<assign>
+<var>${Var}</var>
+</assign>
+<msg timestamp="20200222 16:06:39.529" level="INFO">${Var} = $ 54.00</msg>
+<status status="PASS" starttime="20200222 16:06:39.496" endtime="20200222 16:06:39.529"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Var}</arg>
+</arguments>
+<msg timestamp="20200222 16:06:39.530" level="INFO">$ 54.00</msg>
+<status status="PASS" starttime="20200222 16:06:39.529" endtime="20200222 16:06:39.530"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Var}</arg>
+<arg>${ExpectedRate}</arg>
+</arguments>
+<status status="PASS" starttime="20200222 16:06:39.530" endtime="20200222 16:06:39.530"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:42.530" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:39.530" endtime="20200222 16:06:42.530"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:35.089" endtime="20200222 16:06:42.530"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:16.140" endtime="20200222 16:06:42.530"></status>
+</kw>
+<kw name="Close Application" library="Common" type="teardown">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 16:06:44.531" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 16:06:42.531" endtime="20200222 16:06:44.531"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200222 16:06:44.531" endtime="20200222 16:06:48.647"></status>
+</kw>
+<status status="PASS" starttime="20200222 16:06:42.531" endtime="20200222 16:06:48.647"></status>
+</kw>
+<doc>Calculates the Economy parking cost for 1, 4,5, 24, 48 hours and a week.</doc>
+<status status="PASS" starttime="20200222 16:03:03.679" endtime="20200222 16:06:48.647" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200222 16:03:03.194" endtime="20200222 16:06:48.649"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="EconomyParkingIsFunctional">EconomyParkingIsFunctional</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

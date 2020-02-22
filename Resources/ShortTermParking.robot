@@ -21,15 +21,10 @@ ${ExpectedRate48hours}           $ 48.00
 *** Keywords ***
 The user calculates “Short-Term Parking” costs for 1 hour.
     User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"    ${DefaultEntryTime}   ${LeavingTime1hour}   ${ExpectedRate1hour}
-#    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-#    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime1hour}
-#    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRate1hour}
+
 
 The user calculates “Short-Term Parking” costs for 1 hour and 30 minutes.
     User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"   ${DefaultEntryTime}  ${LeavingTime1_30hour}    ${ExpectedRate1hours30Minutes}
-#    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-#    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime1_30hour}
-#    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRate1hours30Minutes}
 
 The user calculates “Short-Term Parking” costs for 24 hours.
     User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields

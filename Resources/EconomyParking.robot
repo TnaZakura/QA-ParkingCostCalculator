@@ -1,7 +1,8 @@
 *** Settings ***
-Library     SeleniumLibrary
 Documentation    Keywords available to test PO Parking Lot
 
+#Library     SeleniumLibrary
+#Resource  ./PO/ParkingLotDropDown.robot/
 Resource  ./PO/EntryAndLeavingDateTime.robot
 Resource  ./Common.robot
 
@@ -22,19 +23,22 @@ ${ExpectedRateEP7days}        $ 54.00
 
 *** Keywords ***
 User calculates "Economy Parking” costs for 1 hour.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime1hour}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP1hour}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"  ${DefaultEntryTime}  ${LTime1hour}   ${ExpectedRateEP1hour}
+#    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
+#    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime1hour}
+#    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP1hour}
 
 The user calculates "Economy Parking” costs for 4 hours.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime4hours}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP4hours}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"    ${DefaultEntryTime}  ${LTime4hours}  ${ExpectedRateEP4hours}
+#    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
+#    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime4hours}
+#    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP4hours}
 
 The user calculates "Economy Parking” costs for 5 hours.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime5hours}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP5hours}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"    ${DefaultEntryTime}  ${LTime5hours}  ${ExpectedRateEP5hours}
+#    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
+#    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime5hours}
+#    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP5hours}
 
 The user calculates "Economy Parking” costs for 24 hours.
     User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields
