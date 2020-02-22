@@ -65,3 +65,10 @@ User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields
     Add One Day to current date from system into Datefield   ${LeavingDateInput}
     User adds a valid time  ${LeavingTimeInput}   ${DefaultTime24}
     Click Element  ${LeavingPMRadioButton}
+
+User Adds a 1 day 5 hours into Date Time Fields
+    [Arguments]   ${Entry_Time}  ${DefaultTime}
+    Add Current Date from system into Datefield  ${EntryDateInput}
+    User adds a valid time  ${EntryTimeInput}   ${Entry_Time}
+    Add One Day to current date from system into Datefield   ${LeavingDateInput}
+    User adds a valid time  ${LeavingTimeInput}   ${DefaultTime}
