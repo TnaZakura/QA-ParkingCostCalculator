@@ -9,7 +9,7 @@ Test Teardown    Close Application
 
 *** Test Cases ***
 User selects parking lot: "Economy Parking" and gets the estimated Parking Cost
-    [Documentation]  Calculates the parking cost for 1, 4,5, 24, 48 hours and a week.
+    [Documentation]  Calculates the Economy parking cost for 1, 4,5, 24, 48 hours and a week.
     Landing Page loads and its elements are visible
     User Choose “Economy Parking” in Combobox
     User calculates "Economy Parking” costs for 1 hour.
