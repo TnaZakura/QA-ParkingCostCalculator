@@ -1,6 +1,5 @@
 *** Settings ***
 Library     SeleniumLibrary
-
 Documentation    Keywords available to test PO Parking Lot
 
 *** Variables ***
