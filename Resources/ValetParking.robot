@@ -10,6 +10,7 @@ Resource  ./Common.robot
 #defaultValues
 ${DefaultEntryTime}         01:00
 ${LeavingTime5hours}        06:00
+${LeavingTime10}       11:00
 
 #Results Expected
 ${ExpectedRateFor5hours}        $ 12.00
@@ -25,7 +26,7 @@ The user calculates "Valet Parking" costs for 5 hours.
 
 The user calculates "Valet Parking" costs for 10 hours.
     User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    11:00
+    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime10}
     User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateFor10hours}
 
 The user calculates "Valet Parking" costs for 24 hours.
@@ -33,5 +34,5 @@ The user calculates "Valet Parking" costs for 24 hours.
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateFor24hours}
 
 The user calculates "Valet Parking" costs for "1 day and 5 hours".
-    User Adds a 1 day X hours into Date Time Fields                 ${DefaultEntryTime}  ${LeavingTime5hours}
+    User Adds X days and X hours into Date Time Fields             1 days  ${DefaultEntryTime}  ${LeavingTime5hours}
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateFor29hours}
