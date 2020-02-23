@@ -18,8 +18,6 @@ User selects an option from combobox
     Wait Until Element Is Visible           //*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]  timeout=20
     sleep  1s
     Click Element                           //*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]
-#    Wait Until element is not visible       //*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]  timeout=20
-#    Click Element   //*[@id="ParkingLot"]/option[contains(text(),'${ParkingName}')]
     Sleep  5s
 
 User Choose "Valet Parking" in combobox

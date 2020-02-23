@@ -23,14 +23,10 @@ ${ExpectedRateLTP7days}        $ 72.00
 
 *** Keywords ***
 User calculates "Long-Term Garage Parking” costs for 1 hour.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime1hour}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateLTP1hour}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"   ${DefaultEntryTime}  ${LTime1hour}  ${ExpectedRateLTP1hour}
 
 The user calculates "Long-Term Garage Parking” costs for 10 hours.
-    User adds a "Valid Entry Date" and Valid "Entry Time"        ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LTime10hours}
-    User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateLTP10hours}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"  ${DefaultEntryTime}  ${LTime10hours}  ${ExpectedRateLTP10hours}
 
 The user calculates "Long-Term Garage Parking” costs for 24 hours.
     User Adds a 24 hours windonw in "Entry" and "Leaving" Date Time Fields
