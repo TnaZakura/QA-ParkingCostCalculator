@@ -12,6 +12,7 @@ ${DefaultEntryTime}         01:00
 ${LTime1hour}               02:00
 ${LTime4hours}              05:00
 ${LTime5hours}              06:00
+${LTime5hours10m}           06:10
 
 #Results Expected
 ${ExpectedRateEP1hour}        $ 2.00
@@ -20,6 +21,8 @@ ${ExpectedRateEP5hours}       $ 9.00
 ${ExpectedRateEP24hours}      $ 9.00
 ${ExpectedRateEP48hours}      $ 18.00
 ${ExpectedRateEP7days}        $ 54.00
+
+${ExpectedRateEP5H10M}        $ 9.00
 
 *** Keywords ***
 User calculates "Economy Parking” costs for 1 hour.
@@ -42,3 +45,8 @@ The user calculates "Economy Parking” costs for 48 hours.
 The user calculates "Economy Parking” costs for 1 week.
     User Adds X days and X hours into Date Time Fields   7 days  ${DefaultEntryTime}  ${DefaultEntryTime}
     User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP7days}
+
+The user calculates "Economy Parking” costs for 5 hours and 10 minutes, incorrect value is displayed.
+    User adds a "Valid Entry Date" and Valid "Entry Time"               ${DefaultEntryTime}
+    User adds a "Valid Leaving Date" and Valid "Leaving Time"           ${LTime5hours10m}
+    User clicks "Calculate" Button and gets incorrect estimated cost    ${ExpectedRateEP5H10M}
