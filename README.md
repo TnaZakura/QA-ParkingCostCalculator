@@ -1,6 +1,6 @@
 # QA-ParkingCostCalculator
 This Test Suite will test a parking calculator to make sure the estimated cost are correct based on parking type and rate.
-All the Test cases and bugs are available [here](#)
+All the Test cases and bugs are available [here](https://drive.google.com/file/d/12YwjXunC5HB_PG3Ma5yylPNpJ8i7-R0X/view?usp=sharing)
 
 ## Getting Started
 
