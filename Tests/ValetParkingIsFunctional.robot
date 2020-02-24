@@ -8,7 +8,7 @@ Test Setup       Open Application
 Test Teardown    Close Application
 
 *** Test Cases ***
-User selects parking lot: "Valet Parking" and gets the estimated Parking Cost for 5, 10 and 24 hours
+User selects parking lot: "Valet Parking" and gets the estimated Parking Cost for 5, 10, 24 and 29 hours
     [Documentation]  This test calculates the parking cost for 5,10 and 24 hours.
     Landing Page loads and its elements are visible
     User Choose "Valet Parking" in combobox
