@@ -20,31 +20,36 @@ Close Application
     Sleep  2s
     Close Browser
 
-User clicks "Calculate" Button and gets an estimation cost
-    [Arguments]    ${ExpectedRate}
+User clicks "Calculate" Button
     Click Element  ${CalculateBtn}
     Sleep  2s
+
+User clicks "Calculate" Button and gets an estimation cost
+    [Arguments]    ${ExpectedRate}
+    User clicks "Calculate" Button
     ${Var}=  Get Text  ${EstimatedParkingCost}
     Log  ${Var}
     Should be equal  ${Var}  ${ExpectedRate}
     Sleep  3s
 
-User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"
-    [Arguments]     ${EntryTime}  ${LeavingTime}  ${ExpectedRate}
+User Enters Valid "Entry Date/Time" and "Leaving Date/Time"
+    [Arguments]  ${EntryTime}   ${LeavingTime}
     User adds a "Valid Entry Date" and Valid "Entry Time"        ${EntryTime}
     User adds a "Valid Leaving Date" and Valid "Leaving Time"    ${LeavingTime}
+
+User Enters Valid "Entry Date/Time" and "Leaving Date/Time" values and "Clicks Calculate button"
+    [Arguments]     ${EntryTime}  ${LeavingTime}  ${ExpectedRate}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time"  ${EntryTime}   ${LeavingTime}
     User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRate}
 
 User Enters Valid "Entry Date/Time" and "Leaving Date/Time" "Clicks Calculate" and gets "Incorrect" value.
     [Arguments]     ${EntryTime}  ${LeavingTime}  ${ExpectedRate}
-    User adds a "Valid Entry Date" and Valid "Entry Time"               ${EntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"           ${LeavingTime}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time"        ${EntryTime}   ${LeavingTime}
     User clicks "Calculate" Button and gets incorrect estimated cost    ${ExpectedRate}
 
 User clicks "Calculate" Button and gets incorrect estimated cost
     [Arguments]  ${ExpectedRate}
-    Click Element  ${CalculateBtn}
-    Sleep  2s
+    User clicks "Calculate" Button
     ${Var}=  Get Text  ${EstimatedParkingCost}
     Should not be equal  ${Var}  ${ExpectedRate}
     Sleep  3s

@@ -9,8 +9,8 @@ Resource  ./Common.robot
 ${DefaultEntryTime}         01:00
 ${LTime1hour}               02:00
 ${LTime5hours}              06:00
-${time2hours}               03:00
-
+${Time2hours}               03:00
+${LTime5hours10Minutes}     06:10
 #Results Expected
 ${ExpectedRateLTSP1hour}        $ 2.00
 ${ExpectedRateLTSP5hours}       $ 10.00
@@ -18,6 +18,7 @@ ${ExpectedRateLTsP24hours}      $ 10.00
 ${ExpectedRateLTsP26hours}      $ 14.00
 ${ExpectedRateLTsP48hours}      $ 20.00
 ${ExpectedRateLTsP7days}        $ 60.00
+${ExpectedRateLTSP5hours10m}    $ 10.00
 
 *** Keywords ***
 The user calculates the parking costs for 1 hour.
@@ -31,7 +32,7 @@ The user calculates the parking costs for 24 hours.
     User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateLTsP24hours}
 
 The user calculates the parking for 1 day and 2 hours.
-    User Adds X Days And X Hours Into Date Time Fields              1 days  ${DefaultEntryTime}  ${time2hours}
+    User Adds X Days And X Hours Into Date Time Fields              1 days  ${DefaultEntryTime}  ${Time2hours}
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateLTsP26hours}
 
 The user the parking costs for 48 hours.
@@ -41,3 +42,6 @@ The user the parking costs for 48 hours.
 The user calculates the parking for 1 week.
     User Adds X days and X hours into Date Time Fields              7 days  ${DefaultEntryTime}  ${DefaultEntryTime}
     User clicks "Calculate" Button and gets an estimation cost      ${ExpectedRateLTsP7days}
+
+The user calculates parking costs for 5 hours and 10 minutes, incorrect value is displayed.
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" "Clicks Calculate" and gets "Incorrect" value.  ${DefaultEntryTime}  ${LTime5hours10Minutes}  ${ExpectedRateLTSP5hours10m}

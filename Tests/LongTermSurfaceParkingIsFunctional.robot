@@ -23,3 +23,9 @@ User selects parking lot: "Long-Term Surface Parking" and gets the estimated Par
     The user the parking costs for 48 hours.
     User Choose “Long-Term Surface Parking” in combobox
     The user calculates the parking for 1 week.
+
+User selects "“Long-Term Surface Parking” calculates parking cost for "5 hours and 10 minutes" and gets an incorrect cost
+    [Documentation]  This test calculates the parking cost testing rate with minutes.
+    Landing Page loads and its elements are visible
+    User Choose “Long-Term Surface Parking” in combobox
+    The user calculates parking costs for 5 hours and 10 minutes, incorrect value is displayed.
