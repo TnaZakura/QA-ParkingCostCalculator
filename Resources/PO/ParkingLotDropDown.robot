@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Documentation    Keywords available to test PO Parking Lot
+Documentation    Keywords available to test PO Parking Lot and dropdown navigation
 
 *** Variables ***
 ${ParkingLotLocatior}       xpath://td[@class='BodyCopy'][2]/select[@id='ParkingLot']
