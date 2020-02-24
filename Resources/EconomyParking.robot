@@ -47,6 +47,5 @@ The user calculates "Economy Parking” costs for 1 week.
     User clicks "Calculate" Button and gets an estimation cost   ${ExpectedRateEP7days}
 
 The user calculates "Economy Parking” costs for 5 hours and 10 minutes, incorrect value is displayed.
-    User adds a "Valid Entry Date" and Valid "Entry Time"               ${DefaultEntryTime}
-    User adds a "Valid Leaving Date" and Valid "Leaving Time"           ${LTime5hours10m}
-    User clicks "Calculate" Button and gets incorrect estimated cost    ${ExpectedRateEP5H10M}
+    User Enters Valid "Entry Date/Time" and "Leaving Date/Time" "Clicks Calculate" and gets "Incorrect" value.  ${DefaultEntryTime}  ${LTime5hours10m}  ${ExpectedRateEP5H10M}
+
