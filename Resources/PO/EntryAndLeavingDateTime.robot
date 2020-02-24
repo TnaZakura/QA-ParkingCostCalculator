@@ -85,3 +85,11 @@ User adds a value in "Entry Time"
 User adds a value in "Leaving Time"
     [Arguments]  ${Time}
     User adds a valid time      ${LeavingTimeInput}  ${Time}
+
+User adds a value in "Entry Date"
+    [Arguments]  ${Value}
+    Input Date into Datefield     ${EntryDateInput}  ${Value}
+
+User adds a value in "Leaving Date"
+    [Arguments]  ${Value}
+     Input Date into Datefield     ${LeavingDateInput}  ${Value}
