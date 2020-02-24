@@ -74,4 +74,3 @@ User Adds X days and X hours into Date Time Fields
     Add X Day to current date from system into Datefield   ${X_Days}  ${LeavingDateInput}
     User adds a valid time  ${LeavingTimeInput}   ${DefaultTime}
 
-

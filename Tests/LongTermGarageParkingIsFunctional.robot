@@ -21,3 +21,9 @@ User selects parking lot: "Long-Term Garage Parking" and gets the estimated Park
     The user calculates "Long-Term Garage Parking” costs for 48 hours.
     User Choose “Long-Term Garage Parking” in combobox
     The user calculates "Long-Term Garage Parking” costs for 1 week.
+
+User selects "Long-Term Garage Parking" and calculates parking cost for 6 hours and 10 minutes and gets an incorrect cost
+    [Documentation]  This test calculates the parking cost testing rate with minutes.
+    Landing Page loads and its elements are visible
+    User Choose “Long-Term Garage Parking” in combobox
+    The user calculates "Long-Term Garage Parking” costs for 6 hours and 10 minutes, incorrect value is displayed.
