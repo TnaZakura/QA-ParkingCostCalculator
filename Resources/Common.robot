@@ -10,6 +10,11 @@ ${BROWSER}        chrome
 ${EstimatedParkingCost}     xpath:*//table/tbody/tr[4]/td[2]/span[1]/b
 ${CalculateBtn}             xpath://body/form/input[2]
 
+${EntryAMRadioButton}       xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/input[3]
+${EntryPMRadioButton}       xpath://table/tbody/tr[2]/td[@class='BodyCopy'][2]/input[4]
+
+${LeavingAMRadioButton}     xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[3]
+${LeavingPMRadioButton}     xpath://table/tbody/tr[3]/td[@class='BodyCopy'][2]/input[4]
 *** Keywords ***
 Open Application
     Open Browser  ${LOGIN URL}  ${BROWSER}
@@ -53,3 +58,22 @@ User clicks "Calculate" Button and gets incorrect estimated cost
     ${Var}=  Get Text  ${EstimatedParkingCost}
     Should not be equal  ${Var}  ${ExpectedRate}
     Sleep  3s
+
+Estimated Cost is different than "0"
+    ${Var}=  Get Text  ${EstimatedParkingCost}
+    Should not be equal  ${Var}  $ 0.00
+    Sleep  3s
+
+Estimated Cost is "0"
+    ${Var}=  Get Text  ${EstimatedParkingCost}
+    Should be equal  ${Var}  $ 0.00
+    Sleep  3s
+
+
+#Clicks "PM" radio button in "leaving time"
+#    Click Element  ${LeavingPMRadioButton}
+#    Sleep  2s
+
+Clicks "PM" radio button in "Entry time"
+    Click Element  ${EntryPMRadioButton}
+    Sleep  2s

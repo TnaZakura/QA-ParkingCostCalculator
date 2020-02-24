@@ -51,7 +51,7 @@ User adds a valid time
     Click element                       ${TimeInputLocator}
     Clear element Text                  ${TimeInputLocator}
     Sleep  2s
-    Input Text           ${TimeInputLocator}  ${DefaultTime}
+    Input Text                          ${TimeInputLocator}  ${DefaultTime}
     Sleep  3s
 
 User adds a "Valid Leaving Date" and Valid "Leaving Time"
@@ -74,3 +74,14 @@ User Adds X days and X hours into Date Time Fields
     Add X Day to current date from system into Datefield   ${X_Days}  ${LeavingDateInput}
     User adds a valid time  ${LeavingTimeInput}   ${DefaultTime}
 
+Add Current Date to "Entry Date" and "Leaving Date"
+    Add Current Date from system into Datefield  ${EntryDateInput}
+    Add Current Date from system into Datefield  ${LeavingDateInput}
+
+User adds a value in "Entry Time"
+    [Arguments]  ${Time}
+    User adds a valid time      ${EntryTimeInput}  ${Time}
+
+User adds a value in "Leaving Time"
+    [Arguments]  ${Time}
+    User adds a valid time      ${LeavingTimeInput}  ${Time}

@@ -38,8 +38,6 @@ Landing Page loads and its elements are visible
     Element should be visible                   ${EntryPMRadioButton}
     Element should be visible                   ${LeavingDateInput}
     Element should be visible                   ${LeavingTimeInput}
-#    Element should be visible                   ${LeavingAMRadioButton}
-#    Element should be visible                   ${LeavingAMRadioButton}
     Sleep  2s
 
 
